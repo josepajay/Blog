@@ -1,9 +1,10 @@
 ---
 layout: post
-tittle: "questions 2015-12-23"
-date:   2015-12-23 17:52:39 +0530
+title:  "Questions of 24/12"
+date:   2015-12-17 20:50:17 +0530
 categories: jekyll update
 ---
+
 
 ##Redis  
 Redis is data structure server. Its one go the best key value database, a data storage mechanism used for storing,retrieving managing a hash. Redis supports lists sets hash tables hyperloglogs.
