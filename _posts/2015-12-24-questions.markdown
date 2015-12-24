@@ -1,0 +1,59 @@
+---
+layout: post
+tittle: "questions 2015-12-23"
+date:   2015-12-23 17:52:39 +0530
+categories: jekyll update
+---
+
+##Redis  
+Redis is data structure server. Its one go the best key value database, a data storage mechanism used for storing,retrieving managing a hash. Redis supports lists sets hash tables hyperloglogs.
+
+##.Ds Store  
+.DS_Store is the name of a file in the OSX operating system for storing custom attributes of a folder such as the position of icons or the choice of a background image.The name is an abbreviation of Desktop Services Store, reflecting its purpose. It is created and maintained by the finder application in every folder, and has functions similar to the file desktop.ini in microsoft windows
+
+##Basic Unix Commands  
+cat command : Sends file contents to standard output. This is a way to list the contents of short files to the screen. Eg cat .bashrc send the content of .bashrc to screen.
+
+cd command : change directory eg cd/home Change the current working directory to /home
+
+cp command : copy files. Eg: cp myfiles yourfile. Copy the files "myfile" to the file "yourfile" in the current working directory. This command will create the file "yourfile" if it doesn't exist. It will normally overwrite it without warning if it exists.
+
+dd command : disk duplicate eg: dd if=/dev/hdb1 of=/backup/  The man page says this command is to "Convert and copy a file", but although used by more advanced users, it can be a very handy command. The "if" means input file, "of" means output file.
+
+df command : Show the amount of disk space used on each mounted filesystem.
+
+locate command :  slocate -u This command builds the slocate database. It will take several minutes to complete this command. This command must be used before searching for files, however cron runs this command periodically on most systems.
+
+Logout : logs the current user off the system
+
+ls command : list the files
+
+more command : more /etc/profile : lists the contents of the "/etc/profile" file to the screen one page at a time.
+
+mv command : move or rename .mv -i myfile yourfile : move the file from "myfile" to "yourfile". This effectively changes the name of "myfile" to "yourfile"
+
+pwd command : show the name of the current working directory
+
+shutdown : shuts the system down shutdown -h now shuts the system down to halt immediately
+
+where is : show where the binary, source and manual page files are for a command Locates binaries and manual pages for the ls command 
+
+##MarkDown Syntax  
+
+**……**  for bold
+
+_ …… _ for italics
+
+[abc](domain name) for hyperlinks
+
+#…. for  heading 1
+## …. for heading 2
+###…. for heading 3
+and so on
+
+> create a block quote
+
+*item1
+*item2 for unordered list
+
+2 spaces after line — soft break
