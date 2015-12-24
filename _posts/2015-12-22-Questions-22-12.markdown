@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "Questions 22/12"
+date:   2015-12-17 20:50:17 +0530
+categories: jekyll update
+---
+
+## protect_from_forgery?
+
+A feature in Rails that protects against Cross-site Request Forgery (CSRF) attacks. This feature makes all generated forms have a hidden id field. This id field must match the stored id or the form submission is not accepted.This prevents malicious forms on other sites or forms inserted with XSS from submitting to the Rails application.Cross site scripting attack is prevented by adding the authentication token to form field as hidden field. On Post request that token is matched against the one stored in database.
+Difference between dup and clone?
+dup creates a new object without its id being set, so you can save a new object to the database by hitting .save
+category2 = category.dup
+#=> #<Category id: nil, name: "Favorites"> 
+clone creates a new object with the same id, so all the changes made to that new object will overwrite the original record if hitting .save
+category2 = category.clone
+#=> #<Category id: 1, name: "Favorites">
+Create a new lauout in rails?
+class ApplicationController < ActionController::Base
+ layout 'some_layout_name'
+end
+Devise.map in rails?
+map.devise_for :users
+mapping = Devise.mappings[:user]
+
+mapping.name #=> :user
+# is the scope used in controllers and warden, given in the route as :singular.
+
+mapping.as   #=> "users"
+# how the mapping should be search in the path, given in the route as :as.
+
+mapping.to   #=> User
+# is the class to be loaded from routes, given in the route as :class_name.
+
+mapping.modules  #=> [:authenticatable]
+# is the modules included in the class
+
+what are different types  of callbacks?
+Save, valid, before_validation, validate, after_validation,before_save,before_create,create,after_create, after_save,after_commit.
+
+Differnce between yield and content_for?
+content_for(name, content = nil, options = {}, &block) publicCalling content_for stores a block of markup in an identifier for later use. In order to access this stored content in other templates, helper modules or the layout, you would pass the identifier as an argument to content_for.Note: yield can still be used to retrieve the stored content, but calling yield doesn't work in helper modules, while content_for does.
+
+
+Is flash error message can be written in model?
+No
+
+commonly used status codes in rails
+1xx: informational
+2xx: success
+3xx:redirection
+4xx:client error
+5xx: server error
+
+conditional callback?
+
+callbacks are methods that get called at certain points of an objects life cycle.With conditional callbacks we can set a callback to work on satisfying a condition.
+eg:
+before_create :set_invoice_id, :unless => :invoice_id
+
+def set_invoice_id
+  self.invoice_id = line_item_group.invoice_id
+end
